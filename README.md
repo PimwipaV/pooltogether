@@ -8,6 +8,6 @@ maybe this was redundant?4. in development only, fill out the .envrc file with H
 5. copy .envrc files into pooltogether-pool-contracts, pooltogether-pool-builder-ui respectively
 6. docker build -t pooltogether .
 7. docker run (backend- yarn deploy rinkeby or kovan or testnets of your choice)
-8. docker 2nd run (ui- yarn dev) can be multiple build in 1 Dockerfile
+8. maybe can do in 1 run? docker 2nd run (ui- yarn dev) can be multiple build in 1 Dockerfile
 9. go to site mentioned by ui e.g. http://172.17.0.3:3000 to see builder-pooltogether.com ready to onboard users
 
