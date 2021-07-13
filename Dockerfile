@@ -8,15 +8,14 @@ RUN apt-get update && apt-get install -y \
 
 ENV PATH=$PATH:/usr/local/go/bin
 
-RUN git clone https://github.com/direnv/direnv.git && cd direnv \
-    #git fetch && git checkout 729fbecd96f3e827575f19497bc01df33395d679
+RUN git clone https://github.com/direnv/direnv.git && cd direnv && \
     make && \
     make install && \
     cd ../ && \
     git clone https://github.com/pooltogether/pooltogether-pool-contracts.git && cd pooltogether-pool-contracts && \
+    mkdir abis && \
     yarn && \
     yarn add @pooltogether/pooltogether-contracts && \
-    yarn add --dev hardhat@^2.2.1 && \
-    mkdir /abis
-    #yarn hardhat node
+    yarn add --dev hardhat@^2.2.1
+CMD yarn hardhat node
     #yarn start
