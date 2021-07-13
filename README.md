@@ -13,6 +13,7 @@ deploy backend and ui together
 (both backend and ui and be run by 1 docker run command
 docker run (backend- yarn deploy rinkeby or kovan or testnets of your choice) as well as (ui- yarn dev) to launch the app
 
-6. in terminal, docker run -it -v ${PWD}:/home pooltogether:latest
-8. go to site mentioned by ui e.g. http://172.17.0.3:3000 to see builder-pooltogether.com ready to onboard users
+#just one docker run then it's done
+6. docker run -it -v ${PWD}:/home pooltogether:latest
+7. go to site mentioned by ui e.g. http://172.17.0.3:3000 to see builder-pooltogether.com ready to onboard users
 
