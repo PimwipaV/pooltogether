@@ -30,10 +30,10 @@ RUN git clone https://github.com/direnv/direnv.git && cd direnv && \
     yarn
 RUN cd pooltogether-pool-builder-ui && \
     touch .envrc && \
-    echo "NEXT_JS_INFURA_ID=016e5386648343c2aa508b266b49cb0e" >> .envrc && \
+    echo "NEXT_JS_INFURA_ID=<YourNextJSInfuraId>" >> .envrc && \
     echo "NEXT_JS_DEFAULT_ETHEREUM_NETWORK_NAME=rinkeby" >> .envrc && \
     echo "NEXT_JS_DOMAIN_NAME=pooltogether.com" >> .envrc && \
-    echo "INFURA_API_KEY=016e5386648343c2aa508b266b49cb0e" >> .envrc && \
+    echo "INFURA_API_KEY=<YourNextJSInfuraId>" >> .envrc && \
     direnv allow && \
     eval $(direnv export bash)
     #yarn dev 
